@@ -39,7 +39,7 @@ sudo dnf install -y git ansible
 
 # Clone ansible-fedora repo if not already present
 if [ ! -d ".ansible-fedora" ]; then
-  git clone https://github.com/nickhartjes/linux-development-environment.git .ansible-fedora
+  git clone https://github.com/nickhartjes/ansible-fedora.git .ansible-fedora
 fi
 
 # Checkout specified branch
