@@ -1,0 +1,12 @@
+---
+- include_vars: vars.yml
+- name: Install dnf packages
+  become: yes
+  dnf:
+    state: latest
+    update_cache: true
+    name: "{{ dnf.packages }}"
+- name: Remove packages
+  dnf:
+    name: "{{ dnf.remove }}"
+    state: absent

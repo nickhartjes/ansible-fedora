@@ -1,0 +1,26 @@
+---
+- include_vars: vars.yml
+- name: Add multiple yum repos without gpgkey
+  yum_repository:
+    name: '{{ item.value.repo }}'
+    http_caching: packages
+    gpgcheck: no
+    description: '{{ item.value.description }}'
+    state: present
+    baseurl: '{{ item.value.baseurl }}'
+    enabled: yes
+  with_items: '{{ yum_repos }}'
+  when: item.gpgcheck = no
+- name: Add multiple yum repos with gpgkey
+  yum_repository:
+    name: '{{ item.value.repo }}'
+    http_caching: packages
+    gpgcheck: yes
+    description: '{{ item.value.description }}'
+    state: present
+    baseurl: '{{ item.value.baseurl }}'
+    enabled: yes
+    repo_gpgcheck: yes
+    gpgkey: '{{ item.value.gpgkey }}'
+  with_items: '{{ yum_repos }}'
+  when: item.gpgcheck = yes

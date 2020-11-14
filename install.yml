@@ -1,0 +1,15 @@
+---
+- name: Setup Workstation
+  hosts: localhost
+  become: true
+  gather_facts: true
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - include_tasks: tasks/yum-repos.yml
+    - include_tasks: tasks/dnf.yml
+    - include_tasks: tasks/flatpak.yml
+    - include_tasks: tasks/snap.yml
+    - include_tasks: tasks/targz-apps.yml

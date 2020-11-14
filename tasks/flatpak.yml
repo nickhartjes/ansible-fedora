@@ -1,0 +1,8 @@
+---
+- include_vars: vars.yml
+- name: Add multiple flatpak repos
+  community.general.flatpak_remote:
+    name: '{{ item.value.repo }}'
+    flatpakrepo_url: '{{ item.value.url }}'
+    state: present
+  with_items: '{{ flatpak.repos }}'
