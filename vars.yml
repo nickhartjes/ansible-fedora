@@ -6,35 +6,14 @@ yum_repos:
     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
     gpgcheck: yes
     gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-flatpak:
-  repos:
-    - repo: gnome
-      url: https://sdk.gnome.org/gnome-apps.flatpakrepo
-    - repo: flathub
-      url: https://dl.flathub.org/repo/flathub.flatpakrepo
-  apps:
-    default:
-      - com.github.wwmm.pulseeffects
-    flathub: 
-      - com.spotify.Client
-      - com.github.tchx84.Flatseal
-      - com.leinardi.gst
-      - com.visualstudio.code
-      - com.microsoft.Teams
-      - flathub com.github.calo001.fondo
-    gnome:
-      - gedit
 dnf:
   packages:
-    - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm 
-    - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     - git
     - ansible
     - vim-enhanced
     - snapd
-    - openjdk-11-jdk
-    - openjdk-13-jdk
-    - openjdk-8-jdk
+    - java-11-openjdk-devel.x86_64 
+    - java-latest-openjdk-devel.x86_64 
   remove:
     - libreoffice
     - thunderbird

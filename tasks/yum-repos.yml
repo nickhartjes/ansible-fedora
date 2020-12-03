@@ -2,13 +2,13 @@
 - include_vars: vars.yml
 - name: Add multiple yum repos with gpgkey
   yum_repository:
-    name: '{{ item.value.repo }}'
+    name: '{{ item.repo }}'
     http_caching: packages
     gpgcheck: yes
-    description: '{{ item.value.description }}'
+    description: '{{ item.description }}'
     state: present
-    baseurl: '{{ item.value.baseurl }}'
+    baseurl: '{{ item.baseurl }}'
     enabled: yes
     repo_gpgcheck: yes
-    gpgkey: '{{ item.value.gpgkey }}'
+    gpgkey: '{{ item.gpgkey }}'
   with_items: '{{ yum_repos }}'
