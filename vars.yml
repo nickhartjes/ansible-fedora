@@ -40,10 +40,3 @@ snap:
   - authy
   edge:
   - qts3browser
-targzs:
- jetbrains:
-  name: jetbrains-toolbox
-  url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.18.7455.tar.gz
-  target_dir: "{{ home }}/.jetbrains/toolbox"
-pip:
- - pipenv
