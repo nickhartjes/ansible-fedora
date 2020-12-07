@@ -13,13 +13,21 @@ yum_repos:
     gpgkey: https://repo.vivaldi.com/archive/linux_signing_key.pub
 dnf:
   packages:
-    - git
     - ansible
     - deja-dup.x86_64
-    - vim-enhanced
-    - snapd
-    - java-11-openjdk-devel.x86_64 
+    - ffmpeg
+    - git
+    - gstreamer1-plugins-bad.x86_64
+    - gstreamer1-plugins-base.x86_64
+    - gstreamer1-plugins-good-extras.x86_64
+    - gstreamer1-plugins-good.x86_64
+    - gstreamer1-plugins-ugly.x86_64
+    - java-11-openjdk-devel.x86_64
     - java-latest-openjdk-devel.x86_64
+    - nodejs:12
+    - pulseeffects.x86_64
+    - snapd
+    - vim-enhanced
     - vivaldi-stable
   remove:
     - libreoffice
