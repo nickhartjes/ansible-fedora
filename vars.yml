@@ -36,6 +36,7 @@ snap:
   - vlc
   classic:
   - code
+  - deja-dup
   - kontena-lens
   - kubectl
   - node
