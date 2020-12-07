@@ -15,6 +15,7 @@ dnf:
   packages:
     - git
     - ansible
+    - deja-dup.x86_64
     - vim-enhanced
     - snapd
     - java-11-openjdk-devel.x86_64 
@@ -36,7 +37,6 @@ snap:
   - vlc
   classic:
   - code
-  - deja-dup
   - kontena-lens
   - kubectl
   - node
