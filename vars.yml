@@ -6,6 +6,11 @@ yum_repos:
     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
     gpgcheck: yes
     gpgkey: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  - repo: Vivaldi
+    description: Vivaldi browser YUM repo
+    baseurl: http://repo.vivaldi.com/preview/rpm/x86_64/
+    gpgcheck: yes
+    gpgkey: https://repo.vivaldi.com/archive/linux_signing_key.pub
 dnf:
   packages:
     - git
@@ -13,7 +18,8 @@ dnf:
     - vim-enhanced
     - snapd
     - java-11-openjdk-devel.x86_64 
-    - java-latest-openjdk-devel.x86_64 
+    - java-latest-openjdk-devel.x86_64
+    - vivaldi-stable
   remove:
     - libreoffice
     - thunderbird
