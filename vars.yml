@@ -24,9 +24,12 @@ dnf:
     - gstreamer1-plugins-ugly.x86_64
     - java-11-openjdk-devel.x86_64
     - java-latest-openjdk-devel.x86_64
+    - libratbag-ratbagd.x86_64            # Needed for piper
     - nodejs
+    - piper.noarch
     - pulseeffects.x86_64
     - snapd
+    - solaar.noarch
     - vim-enhanced
     - vivaldi-stable
   remove:
