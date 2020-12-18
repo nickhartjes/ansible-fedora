@@ -33,6 +33,7 @@ dnf:
     - rawtherapee.x86_64
     - snapd
     - solaar.noarch
+    - shotwell.x86_64
     - vim-enhanced
     - vivaldi-stable
   remove:
