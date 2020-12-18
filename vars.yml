@@ -15,6 +15,8 @@ dnf:
   packages:
     - ansible
     - deja-dup.x86_64
+    - darktable.x86_64
+    - darktable-tools-noise.x86_64
     - ffmpeg
     - git
     - gstreamer1-plugins-bad-free.x86_64
@@ -28,6 +30,7 @@ dnf:
     - nodejs
     - piper.noarch
     - pulseeffects.x86_64
+    - rawtherapee.x86_64
     - snapd
     - solaar.noarch
     - vim-enhanced
