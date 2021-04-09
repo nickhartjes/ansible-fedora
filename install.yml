@@ -11,3 +11,5 @@
     - include_tasks: tasks/yum-repos.yml
     - include_tasks: tasks/dnf.yml
     - include_tasks: tasks/snap.yml
+    - include_tasks: tasks/default.yml
+    - include_tasks: tasks/git.yml

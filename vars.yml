@@ -11,12 +11,16 @@ yum_repos:
     baseurl: http://repo.vivaldi.com/preview/rpm/x86_64/
     gpgcheck: yes
     gpgkey: https://repo.vivaldi.com/archive/linux_signing_key.pub
+  - repo: VisualStudioCode
+    description: Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgcheck: yes
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 dnf:
   packages:
     - ansible
     - deja-dup.x86_64
-    - darktable.x86_64
-    - darktable-tools-noise.x86_64
+    - code
     - ffmpeg
     - git
     - gstreamer1-plugins-bad-free.x86_64
@@ -33,28 +37,31 @@ dnf:
     - rawtherapee.x86_64
     - snapd
     - solaar.noarch
-    - shotwell.x86_64
     - vim-enhanced
     - vivaldi-stable
+    - fontawesome-fonts                 # Needed for powerline10k 
   remove:
     - libreoffice
     - thunderbird
 snap:
   default:
+  - bitwarden
   - discord
   - docker
   - gimp
+  - joplin-james-carroll
+  - hiri
   - mysql-workbench-community
   - obs-studio
   - postman
   - redis-desktop-manager
   - spotify
   - vlc
+  - qts3browser
   classic:
-  - code
   - kontena-lens
   - kubectl
-  - node
+  - helm
   - shotcut
   - slack
   - sublime-text
@@ -62,3 +69,10 @@ snap:
   - authy
   edge:
   - qts3browser
+git:
+  - repo: https://github.com/alacritty/alacritty.git
+    dest: /projects/system/alacritty
+  - repo: https://github.com/material-shell/material-shell.git
+    dest: /projects/system/material-shell
+  - repo: https://github.com/mguessan/davmail
+    dest: /projects/system/davmail

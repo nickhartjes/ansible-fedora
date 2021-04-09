@@ -1,0 +1,8 @@
+---
+- include_vars: vars.yml
+- name: Install Repo's
+  become: yes
+  git:
+    repo:  "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+  with_items: "{{ git }}"
